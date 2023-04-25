@@ -37,9 +37,6 @@ func NewLogger(cfg *config.Config) *zap.Logger {
 		LogFileEnable:   cfg.LogFileEnable,
 		LogStdoutEnable: cfg.LogStdoutEnable,
 		LogFile:         cfg.LogFile,
-		MaxSize:         cfg.MaxSize,
-		MaxAge:          cfg.MaxAge,
-		MaxBackups:      cfg.MaxBackups,
 	}
 	return l.initLogger(cfg)
 }
@@ -66,10 +63,7 @@ func (l *logger) initLogger(cfg *config.Config) *zap.Logger {
 		fileLogger = li.newCore(
 			jsonEncoder,
 			li.addSync(&lumberjack.Logger{
-				Filename:   l.LogFile,
-				MaxSize:    l.MaxSize,
-				MaxAge:     l.MaxAge,
-				MaxBackups: l.MaxBackups,
+				Filename: l.LogFile,
 			}),
 			li.logLevel(cfg),
 		)

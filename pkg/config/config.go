@@ -14,7 +14,7 @@ type Logger struct {
 	LogStdoutEnable bool   `mapstructure:"logStdoutEnable"`
 	LogFile         string `mapstructure:"logFile"`
 	RewriteLog      bool   `mapstructure:"rewriteLog"`
-	MaxSize         int    `mapstructure:"maxSize"`
-	MaxAge          int    `mapstructure:"maxAge"`
-	MaxBackups      int    `mapstructure:"maxBackups"`
+	// MaxSize         int    `mapstructure:"maxSize"`
+	// MaxAge          int    `mapstructure:"maxAge"`
+	// MaxBackups      int    `mapstructure:"maxBackups"`
 }

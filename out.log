@@ -1,3 +1,1 @@
-{"level":"[ERROR]","time":"2023-04-25T09:56:15.437+0300","caller":"clean_korzina/main.go:41","message":"remove /home/ksenia/.local/share/Trash/files/logger: directory not empty"}
-{"level":"[ERROR]","time":"2023-04-25T09:56:17.439+0300","caller":"clean_korzina/main.go:41","message":"remove /home/ksenia/.local/share/Trash/files/logger: directory not empty"}
-{"level":"[ERROR]","time":"2023-04-25T09:56:19.441+0300","caller":"clean_korzina/main.go:41","message":"remove /home/ksenia/.local/share/Trash/files/logger: directory not empty"}
+{"level":"[ERROR]","time":"2023-04-25T09:57:50.133+0300","caller":"clean_korzina/main.go:41","message":"remove /home/ksenia/.local/share/Trash/files/logger: directory not empty"}
