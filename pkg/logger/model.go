@@ -5,7 +5,4 @@ type logger struct {
 	LogFileEnable   bool
 	LogStdoutEnable bool
 	LogFile         string
-	MaxSize         int
-	MaxAge          int
-	MaxBackups      int
 }
