@@ -58,6 +58,9 @@ func readFlags(cfg *Config) {
 	flag.BoolVar(&cfg.LogStdoutEnable, "logStdoutEnable", cfg.LogStdoutEnable, "The statement whether to log to console")
 	flag.StringVar(&cfg.LogFile, "logpath", cfg.LogFile, "The path to file of logging out")
 	flag.BoolVar(&cfg.RewriteLog, "rewriteLog", cfg.RewriteLog, "Is rewrite log file")
+	flag.IntVar(&cfg.MaxSize, "maxSize", cfg.MaxSize, "The path to file of logging out")
+	flag.IntVar(&cfg.MaxAge, "maxAge", cfg.MaxAge, "The path to file of logging out")
+	flag.IntVar(&cfg.MaxBackups, "maxBackups", cfg.MaxBackups, "The path to file of logging out")
 
 	flag.Parse()
 }

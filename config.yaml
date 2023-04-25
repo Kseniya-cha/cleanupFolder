@@ -9,3 +9,6 @@ logger:
   logStdoutEnable: true
   logFile: ./out.log
   rewriteLog: true
+  maxSize: 500
+  maxAge: 28
+  maxBackups: 7

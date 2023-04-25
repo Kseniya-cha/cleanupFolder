@@ -20,12 +20,14 @@ func main() {
 	// Инициализация логгера
 	log := logger.NewLogger(cfg)
 
+loop:
 	for {
 		time.Sleep(cfg.TimeClean)
 
 		trashs, err := os.ReadDir(cfg.FilePath)
 		if err != nil {
 			log.Error(err.Error())
+			continue
 		}
 
 		if len(trashs) == 0 {
@@ -37,6 +39,7 @@ func main() {
 			err = os.Remove(cfg.FilePath + trash.Name())
 			if err != nil {
 				log.Error(err.Error())
+				continue loop
 			}
 		}
 

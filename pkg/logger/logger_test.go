@@ -61,7 +61,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestFileStdout",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: false, LogFile: path,
-				LogFileEnable: true, LogStdoutEnable: true,
+				LogFileEnable: true, LogStdoutEnable: true, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			logFile: li.newCore(
 				jsonEncoder,
@@ -84,7 +85,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestFile",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: false, LogFile: path,
-				LogFileEnable: true, LogStdoutEnable: false,
+				LogFileEnable: true, LogStdoutEnable: false, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			logFile: li.newCore(
 				jsonEncoder,
@@ -102,7 +104,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestStdout",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: false, LogFile: path,
-				LogFileEnable: false, LogStdoutEnable: true,
+				LogFileEnable: false, LogStdoutEnable: true, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			logStdout: li.newCore(
 				textEncoder,
@@ -115,7 +118,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestBothFalse",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: false, LogFile: path,
-				LogFileEnable: false, LogStdoutEnable: false,
+				LogFileEnable: false, LogStdoutEnable: false, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			isNeedCreateFile: false,
 		},
@@ -123,7 +127,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestRewrite/FileNotExists",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: true, LogFile: path,
-				LogFileEnable: true, LogStdoutEnable: false,
+				LogFileEnable: true, LogStdoutEnable: false, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			logFile: li.newCore(
 				jsonEncoder,
@@ -141,7 +146,8 @@ func TestNewLogger(t *testing.T) {
 			name: "TestRewrite/FileExists",
 			cfg: config.Config{Logger: config.Logger{
 				LogLevel: "INFO", RewriteLog: true, LogFile: path,
-				LogFileEnable: true, LogStdoutEnable: false,
+				LogFileEnable: true, LogStdoutEnable: false, MaxSize: 100,
+				MaxAge: 28, MaxBackups: 7,
 			}},
 			logFile: li.newCore(
 				jsonEncoder,

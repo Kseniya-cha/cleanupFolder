@@ -12,6 +12,9 @@ type Logger struct {
 	LogLevel        string `mapstructure:"logLevel"`
 	LogFileEnable   bool   `mapstructure:"logFileEnable"`
 	LogStdoutEnable bool   `mapstructure:"logStdoutEnable"`
-	LogFile         string `mapstructure:"logpath"`
+	LogFile         string `mapstructure:"logFile"`
 	RewriteLog      bool   `mapstructure:"rewriteLog"`
+	MaxSize         int    `mapstructure:"maxSize"`
+	MaxAge          int    `mapstructure:"maxAge"`
+	MaxBackups      int    `mapstructure:"maxBackups"`
 }
