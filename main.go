@@ -26,6 +26,11 @@ func main() {
 			log.Error(err.Error())
 		}
 
+		if len(trashs) == 0 {
+			log.Info("nothing to delete")
+			continue
+		}
+
 		for _, trash := range trashs {
 			fmt.Println(trash.Name())
 			err = os.Remove(cfg.FilePath + trash.Name())
