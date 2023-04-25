@@ -1,1 +1,1 @@
-{"level":"[ERROR]","time":"2023-04-25T09:57:50.133+0300","caller":"clean_korzina/main.go:41","message":"remove /home/ksenia/.local/share/Trash/files/logger: directory not empty"}
+{"level":"[INFO]","time":"2023-04-25T10:04:40.616+0300","caller":"clean_korzina/main.go:51","message":"clean trash!"}

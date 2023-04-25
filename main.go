@@ -36,6 +36,11 @@ loop:
 		}
 
 		for _, trash := range trashs {
+			if trash.IsDir() {
+				os.RemoveAll(cfg.FilePath + trash.Name())
+				continue
+			}
+
 			err = os.Remove(cfg.FilePath + trash.Name())
 			if err != nil {
 				log.Error(err.Error())
