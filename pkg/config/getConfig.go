@@ -52,5 +52,12 @@ func (cfg *Config) readParametersFromConfig(v *viper.Viper) error {
 func readFlags(cfg *Config) {
 	flag.DurationVar(&cfg.TimeClean, "timeClean", cfg.TimeClean, "time for period clean")
 	flag.StringVar(&cfg.FilePath, "filePath", cfg.FilePath, "file for clean")
+
+	flag.StringVar(&cfg.LogLevel, "logLevel", cfg.LogLevel, "The level of logging parameter")
+	flag.BoolVar(&cfg.LogFileEnable, "logFileEnable", cfg.LogFileEnable, "The statement whether to log to a file")
+	flag.BoolVar(&cfg.LogStdoutEnable, "logStdoutEnable", cfg.LogStdoutEnable, "The statement whether to log to console")
+	flag.StringVar(&cfg.LogFile, "logpath", cfg.LogFile, "The path to file of logging out")
+	flag.BoolVar(&cfg.RewriteLog, "rewriteLog", cfg.RewriteLog, "Is rewrite log file")
+
 	flag.Parse()
 }

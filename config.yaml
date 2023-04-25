@@ -1,4 +1,11 @@
 # как часто очищать папку
 timeClean: 2s
 # путь до папки
-filePath: 
+filePath: /home/ksenia/.local/share/Trash/files/
+# параметры логирования
+logger:
+  logLevel: DEBUG
+  logFileEnable: true
+  logStdoutEnable: true
+  logFile: ./log.log
+  rewriteLog: true
