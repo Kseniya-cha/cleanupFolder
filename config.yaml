@@ -7,5 +7,5 @@ logger:
   logLevel: DEBUG
   logFileEnable: true
   logStdoutEnable: true
-  logFile: ./out.log
+  logFile: ./log.log
   rewriteLog: true
